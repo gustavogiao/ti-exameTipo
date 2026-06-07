@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="agendamentos.xsl"?>
+<agendamentos>
+    <agendamento id="1">
+        <animal>
+            <microchip>123456789012345</microchip>
+            <nome>Luna</nome>
+            <especie>Canideo</especie>
+            <raca>Labrador Retriever</raca>
+        </animal>
+        <tutor>
+            <nome>Maria Silva</nome>
+            <telefone>912345678</telefone>
+        </tutor>
+        <consulta>
+            <data>2027-06-10</data>
+            <hora>14:30</hora>
+            <tipo>Vacinacao</tipo>
+            <estado>Confirmada</estado>
+        </consulta>
+    </agendamento>
+
+    <agendamento id="2">
+        <animal>
+            <microchip>987654321098765</microchip>
+            <nome>Simba</nome>
+            <especie>Felino</especie>
+            <raca>Europeu Comum</raca>
+        </animal>
+        <tutor>
+            <nome>Joao Santos</nome>
+            <telefone>923456789</telefone>
+        </tutor>
+        <consulta>
+            <data>2027-06-11</data>
+            <hora>09:15</hora>
+            <tipo>Consulta de rotina</tipo>
+            <estado>Pendente</estado>
+        </consulta>
+    </agendamento>
+
+    <agendamento id="3">
+        <animal>
+            <microchip>111222333444555</microchip>
+            <nome>Kiko</nome>
+            <especie>Canideo</especie>
+            <raca>Beagle</raca>
+        </animal>
+        <tutor>
+            <nome>Ana Costa</nome>
+            <telefone>934567890</telefone>
+        </tutor>
+        <consulta>
+            <data>2027-06-12</data>
+            <hora>16:00</hora>
+            <tipo>Desparasitacao</tipo>
+            <estado>Confirmada</estado>
+        </consulta>
+    </agendamento>
+
+    <agendamento id="4">
+        <animal>
+            <microchip>555444333222111</microchip>
+            <nome>Mia</nome>
+            <especie>Felino</especie>
+            <raca>Siamese</raca>
+        </animal>
+        <tutor>
+            <nome>Pedro Martins</nome>
+            <telefone>965432100</telefone>
+        </tutor>
+        <consulta>
+            <data>2027-06-14</data>
+            <hora>11:45</hora>
+            <tipo>Cirurgia</tipo>
+            <estado>Confirmada</estado>
+        </consulta>
+    </agendamento>
+</agendamentos>

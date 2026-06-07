@@ -9,6 +9,7 @@ Projeto de exame-tipo para uma clinica veterinaria, composto por tres servicos i
 | `exercicio1-soap-tutores` | SOAP Spring Web Services | `8002` | Consulta dados do tutor e animal por microchip. |
 | `exercicio2-rest-consultas` | REST JAX-RS/Jersey + Gson | `8001` | Agenda consultas veterinarias via JSON. |
 | `exercicio3-soap-agendamento-final` | SOAP JAX-WS | `8000` | Mediador que integra o SOAP do exercicio 1 com o REST do exercicio 2. |
+| `exercicio4-xml` | XML + XSLT | N/A | Transforma uma lista XML de agendamentos em HTML. |
 
 ## Requisitos
 
@@ -331,6 +332,72 @@ curl -X POST http://localhost:8000/services/agendamento \
 - URL: `http://localhost:8000/services/agendamento`
 - Header: `Content-Type: text/xml;charset=UTF-8`
 - Body: `raw` com o XML SOAP do exercicio 3
+
+## Exercicio 4 - XML + XSLT
+
+Transformacao de uma lista XML de agendamentos veterinarios para HTML.
+
+Ficheiros:
+
+```text
+exercicio4-xml/exercicio4.xml
+exercicio4-xml/agendamentos.xsl
+```
+
+O XML inclui a ligacao para a folha XSLT:
+
+```xml
+<?xml-stylesheet type="text/xsl" href="agendamentos.xsl"?>
+```
+
+### Estrutura Do XML
+
+Cada agendamento contem:
+
+```text
+animal: microchip, nome, especie, raca
+tutor: nome, telefone
+consulta: data, hora, tipo, estado
+```
+
+A folha XSLT usa `xsl:for-each`, por isso suporta qualquer numero de agendamentos.
+
+### Ver No Browser
+
+Abrir diretamente:
+
+```text
+exercicio4-xml/exercicio4.xml
+```
+
+Se o browser bloquear XSLT local por seguranca, usar um servidor local simples na raiz do repositorio:
+
+```bash
+python -m http.server 8080
+```
+
+Depois abrir:
+
+```text
+http://localhost:8080/exercicio4-xml/exercicio4.xml
+```
+
+### Gerar HTML Com PowerShell
+
+```powershell
+$xml = "exercicio4-xml/exercicio4.xml"
+$xsl = "exercicio4-xml/agendamentos.xsl"
+$out = "exercicio4-xml/agendamentos.html"
+$transform = New-Object System.Xml.Xsl.XslCompiledTransform
+$transform.Load($xsl)
+$transform.Transform($xml, $out)
+```
+
+Resultado:
+
+```text
+exercicio4-xml/agendamentos.html
+```
 
 ## Teste Do Pipeline Completo
 
