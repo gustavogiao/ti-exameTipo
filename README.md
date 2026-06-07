@@ -41,3 +41,18 @@ Endpoint:
 ```text
 POST http://localhost:8001/api/consultas
 ```
+
+## Exercicio 3
+
+Antes de testar o mediador, os exercicios 1 e 2 devem estar a correr.
+
+```bash
+cd exercicio3-soap-agendamento-final
+mvn spring-boot:run
+```
+
+WSDL:
+
+```text
+http://localhost:8000/services/agendamento?wsdl
+```
