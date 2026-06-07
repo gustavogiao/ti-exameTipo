@@ -28,3 +28,16 @@ Microchips de teste:
 987654321098765
 111222333444555
 ```
+
+## Exercicio 2
+
+```bash
+cd exercicio2-rest-consultas
+mvn spring-boot:run
+```
+
+Endpoint:
+
+```text
+POST http://localhost:8001/api/consultas
+```
